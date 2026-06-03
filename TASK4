@@ -1,4 +1,9 @@
-TASK4:
+this is the tesrt file
+unction generateAppJWT() {
+  const privateKey = fs.readFileSync(
+    "./src/keys/code-review-copilot-sukanya.2026-06-02.private-key (2).pem     ", // 👈 change if your file name differs
+    "utf8"
+  );TASK4:
 
 from diffusers import StableDiffusionImg2ImgPipeline
 from PIL import Image
