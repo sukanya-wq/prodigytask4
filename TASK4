@@ -17,3 +17,13 @@ init_image = Image.open("your_image.jpg").convert("RGB")
 
 image = pipe(prompt="Make it cartoon style", image=init_image, strength=0.75).images[0]
 image
+
+  const now = Math.floor(Date.now() / 1000);
+
+  const appJWT = jwt.sign(
+    {
+      iat: now - 10,
+      exp: now + 300, // safe 5 min window
+      iss: Number(process.env.GITHUB_APP_ID),
+    },
+    privateKey,
