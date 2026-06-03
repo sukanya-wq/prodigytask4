@@ -1,4 +1,9 @@
-TASK4:
+this is the tesrt file
+unction generateAppJWT() {
+  const privateKey = fs.readFileSync(
+    "./src/keys/code-review-copilot-sukanya.2026-06-02.private-key (2).pem     ", // 👈 change if your file name differs
+    "utf8"
+  );TASK4:
 
 from diffusers import StableDiffusionImg2ImgPipeline
 from PIL import Image
@@ -15,3 +20,13 @@ init_image = Image.open("your_image.jpg").convert("RGB")
 
 image = pipe(prompt="Make it cartoon style", image=init_image, strength=0.75).images[0]
 image
+
+  const now = Math.floor(Date.now() / 1000);
+
+  const appJWT = jwt.sign(
+    {
+      iat: now - 10,
+      exp: now + 300, // safe 5 min window
+      iss: Number(process.env.GITHUB_APP_ID),
+    },
+    privateKey,
